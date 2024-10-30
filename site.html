@@ -3,109 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: 20px;
-        }
-        .banner {
-            background-color: #f4f4f4;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .menu {
-            width: 30px;
-            height: 30px;
-            background-color: #ccc;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 5px;
-        }
-        .menu div {
-            height: 3px;
-            background-color: #333;
-        }
-        .content {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .left, .right {
-            flex: 1;
-        }
-        .image-box {
-            background-color: #e0e0e0;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .button {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            text-decoration: none;
-        }
-        .about, .other-stuff {
-            background-color: #f9f9f9;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>Expanded Portfolio Layout</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <div class="banner">
             <h1>Portfolio</h1>
-            <div class="menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
         </div>
-        
-        <div class="content">
-            <div class="left">
-                <div class="image-box">
-                    <p>Image</p>
-                </div>
-                <div class="buttons">
-                    <a href="#" class="button">Button 1</a>
-                    <a href="#" class="button">Button 2</a>
-                    <a href="#" class="button">Button 3</a>
-                </div>
+        <nav id="popup-menu" class="popup-menu">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#other-stuff">Other Stuff</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Left Section with Image and Buttons -->
+        <div class="left-section">
+            <div class="image-placeholder">
+                <p>Image</p>
             </div>
-            
-            <div class="right">
-                <div class="about">
-                    <h2>About Me</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae eros at ex gravida gravida.</p>
-                </div>
-                <div class="other-stuff">
-                    <h2>Other Stuff</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae eros at ex gravida gravida.</p>
-                </div>
-            </div>
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
         </div>
-    </div>
+
+        <!-- Right Section with About Me and Other Stuff -->
+        <div class="right-section">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>This is a brief introduction about me, including my skills and background.</p>
+            </section>
+            <section id="other-stuff">
+                <h2>Other Stuff</h2>
+                <p>This section contains other information, such as interests, hobbies, or miscellaneous content.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
